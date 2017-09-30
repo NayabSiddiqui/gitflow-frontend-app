@@ -20,6 +20,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# styles
+src/**/*.css
+
 # IDEA related files
 gitflow-frontend-app.iml
 .idea/
