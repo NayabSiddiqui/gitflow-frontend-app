@@ -1,5 +1,5 @@
 node {
-    env.NODEJS_HOME = "${tool 'Node-8.2.1'}"
+    env.NODEJS_HOME = "${tool 'Node-default'}"
     // on linux / mac
     env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
     // on windows
