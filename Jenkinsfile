@@ -13,6 +13,10 @@ node {
   }
 
   stage('NPM Package Install') {
+    print "Globally install the create-react-app package"
+    sh 'npm install create-react-app -g'
+
+    print "Installing packages for the project"
     sh 'npm install'
   }
 
