@@ -12,7 +12,7 @@ def handleCheckout = {
 				options: [
 					fastForwardMode: 'NO_FF',
 					mergeRemote: env.gitlabTargetNamespace,
-					mergeTarget: env.gitlabTargetBranch
+					mergeTarget: env.CHANGE_TARGET
 				]
 			]
 		],
@@ -45,6 +45,8 @@ node {
 
   stage('Codebase Setup') {
     sh 'printenv'
+
+    checkout scm
   }
 
   stage('NPM Package Install') {
