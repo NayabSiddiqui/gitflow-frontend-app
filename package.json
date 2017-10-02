@@ -13,8 +13,8 @@
     "start-ts": "react-scripts-ts start",
     "start": "npm-run-all -p watch-css start-ts",
     "build": "npm run build-css && react-scripts-ts build",
-    "pretest": "npm run build",
     "test": "react-scripts-ts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
+    "test:ci": "npm test -- --coverage",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {

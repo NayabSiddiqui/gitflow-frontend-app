@@ -20,12 +20,16 @@ node {
     sh 'npm install'
   }
 
+  stage('Build typescript and css'){
+    sh 'npm run build'
+  }
+
   stage('Test'){
     env.NODE_ENV = 'test'
-    print 'Environment will be : ${env.NODE_ENV}'
+    print "Environment will be : ${env.NODE_ENV}"
     env.CI = true
-    print 'Running in CI mode : ${env.CI}'
+    print "Running in CI mode : ${env.CI}"
 
-    sh 'npm test'
+    sh 'npm run test:ci'
   }
 }
