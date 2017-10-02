@@ -44,7 +44,7 @@ node {
 
 
   stage('Codebase Setup') {
-    handleCheckout()
+    sh 'printenv'
   }
 
   stage('NPM Package Install') {
