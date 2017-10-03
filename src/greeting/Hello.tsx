@@ -17,7 +17,7 @@ const Hello = ({name, enthusiasmLevel = 1}: Props) => {
   return (
     <div className="hello">
       <div className="greeting">
-        Hey {name + getExclamationMarks(enthusiasmLevel)}
+        Hola {name + getExclamationMarks(enthusiasmLevel)}
       </div>
     </div>
   );
